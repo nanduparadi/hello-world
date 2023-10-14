@@ -1,0 +1,13 @@
+<p>parent works!</p>
+<button (click)="toggleChild()">Toggle Child</button>
+<input type="file" [(ngModel)]="selectedFiles" (change)="onFileSelection()" >
+Name:<input type="text" value="" (input)="box($event)">
+
+<!-- <h4>myClick is an event on the custom ClickDirective:</h4>
+<button type="button" (myClick)="clickMessage=$event" clickable>click with myClick</button>
+{{clickMessage}} -->
+
+
+<input type="text" #msg><button  (click)="click(msg.value)">click</button>
+
+<app-child *ngIf="isChild"></app-child>
